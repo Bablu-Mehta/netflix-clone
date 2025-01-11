@@ -1,0 +1,33 @@
+.row-container {
+    margin-bottom: 20px;
+  }
+  
+  .row-title {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  
+  .row-items {
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+  
+  .row-items::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  .row-item {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .row-item:hover {
+    transform: scale(1.1);
+  }
+  
