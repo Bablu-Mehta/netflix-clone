@@ -1,12 +1,16 @@
+/* Container for each row */
 .row-container {
     margin-bottom: 20px;
   }
   
+  /* Title for the row (e.g., "Trending Now") */
   .row-title {
     font-size: 18px;
     margin-left: 20px;
+    color: white;
   }
   
+  /* Flexbox to horizontally scroll the items */
   .row-items {
     display: flex;
     overflow-x: scroll;
@@ -14,10 +18,12 @@
     gap: 10px;
   }
   
+  /* Hide scrollbar for a cleaner look */
   .row-items::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+    display: none;
   }
   
+  /* Styling for each movie/series poster */
   .row-item {
     width: 150px;
     height: 225px;
@@ -27,6 +33,7 @@
     cursor: pointer;
   }
   
+  /* Enlarge the poster on hover */
   .row-item:hover {
     transform: scale(1.1);
   }

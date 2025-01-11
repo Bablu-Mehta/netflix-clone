@@ -9,22 +9,27 @@ const SelectionScreen: React.FC = () => {
   const dispatch = useDispatch();
 
   const handleProfileClick = () => {
-    navigate("/home");
+    navigate("/home"); // Navigate to the home screen when a profile is selected
   };
 
   const handleLogout = () => {
-    dispatch(logout());
-    navigate("/");
+    dispatch(logout()); // Dispatch logout action to clear auth state
+    navigate("/"); // Redirect to the login page after logging out
   };
 
   return (
     <div className={styles["selection-container"]}>
+      {/* Logout Button */}
       <div className={styles["logout-button-container"]}>
         <button onClick={handleLogout} className={styles["logout-button"]}>
           Logout
         </button>
       </div>
+
+      {/* Selection Title */}
       <h1 className={styles["selection-title"]}>Who's Watching?</h1>
+
+      {/* Profile Cards */}
       <div className={styles["profile-list"]}>
         <div className={styles["profile-card"]} onClick={handleProfileClick}>
           <img

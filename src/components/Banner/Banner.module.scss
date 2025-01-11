@@ -1,33 +1,40 @@
 .banner {
-    position: relative;
-    height: 400px;
-    color: white;
-    background-color: black;
-    overflow: hidden;
-  }
-  
-  .banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7);
-  }
-  
-  .banner-content {
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
-    z-index: 1;
-  }
-  
-  .banner-title {
-    font-size: 48px;
-    margin: 0;
-  }
-  
-  .banner-description {
-    font-size: 18px;
-    max-width: 50%;
-    margin-top: 10px;
-  }
-  
+  position: relative;
+  height: 400px;
+  color: white;
+  background-color: black;
+  overflow: hidden;
+  cursor: pointer; /* Make banner clickable */
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* Dim the background for better readability */
+  transition: filter 0.3s ease; /* Smooth hover transition */
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  z-index: 1;
+}
+
+.banner-title {
+  font-size: 48px;
+  margin: 0;
+}
+
+.banner-description {
+  font-size: 18px;
+  max-width: 50%;
+  margin-top: 10px;
+  color: #e1e1e1; /* Slightly lighter color for readability */
+}
+
+/* Hover effect to brighten the banner */
+.banner:hover .banner-image {
+  filter: brightness(1);
+}

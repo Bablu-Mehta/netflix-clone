@@ -1,54 +1,59 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Row.module.scss";
-
-interface Movie {
-  id: number;
-  name: string;
-  poster: string;
-  description: string;
-  release_date: string;
-}
-
-interface Category {
-  id: number;
-  title: string;
-  movies: Movie[];
-}
+import { Movie, Series } from "../../../interfaces"; // Import shared interfaces
 
 interface RowProps {
-  title: string;
-  categoryId: number;
+  title: string; // Title of the row (e.g., "Trending Now")
+  categoryId: number; // Category ID to fetch movies/series
+}
+
+export interface Category {
+  id: number; // Unique ID for the category
+  title: string; // Title of the category
+  movies?: Movie[]; // Optional, as some categories may only have series
+  series?: Series[]; // Optional, as some categories may only have movies
 }
 
 const Row: React.FC<RowProps> = ({ title, categoryId }) => {
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const [items, setItems] = useState<(Movie | Series)[]>([]); // Handles both movies and series
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchMovies = async () => {
-      const response = await fetch("/movies.json");
+    const fetchItems = async () => {
+      const response = await fetch("/movies.json"); // Fetch data from movies.json
       const data: { categories: Category[] } = await response.json();
 
-      // Find the category by ID
+      // Find the category matching the given categoryId
       const category = data.categories.find((cat) => cat.id === categoryId);
-
       if (category) {
-        setMovies(category.movies);
+        const combinedItems = [
+          ...(category.movies || []), // Add movies if they exist
+          ...(category.series || []), // Add series if they exist
+        ];
+        setItems(combinedItems);
       }
     };
 
-    fetchMovies();
+    fetchItems();
   }, [categoryId]);
+
+  // Handle click to navigate to movie/series details
+  const handleItemClick = (id: number, isSeries: boolean) => {
+    navigate(isSeries ? `/series/${id}` : `/movie/${id}`);
+  };
 
   return (
     <div className={styles["row-container"]}>
       <h2 className={styles["row-title"]}>{title}</h2>
       <div className={styles["row-items"]}>
-        {movies.map((movie) => (
+        {items.map((item) => (
           <img
-            key={movie.id}
+            key={item.id}
             className={styles["row-item"]}
-            src={movie.poster}
-            alt={movie.name}
+            src={item.poster}
+            alt={item.name}
+            onClick={() => handleItemClick(item.id, "episodes" in item)} // Check if it's a series
           />
         ))}
       </div>

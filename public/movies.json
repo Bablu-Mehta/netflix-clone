@@ -1,81 +1,76 @@
 {
-    "categories": [
-      {
-        "id": 1,
-        "title": "Trending Now",
-        "movies": [
-          {
-            "id": 101,
-            "name": "Inception",
-            "poster": "https://via.placeholder.com/150",
-            "description": "A skilled thief leads a team to infiltrate dreams.",
-            "release_date": "2010-07-16"
-          },
-          {
-            "id": 102,
-            "name": "Interstellar",
-            "poster": "https://via.placeholder.com/150",
-            "description": "Explorers journey through a wormhole in space.",
-            "release_date": "2014-11-07"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "title": "Top Rated",
-        "movies": [
-          {
-            "id": 201,
-            "name": "The Dark Knight",
-            "poster": "https://via.placeholder.com/150",
-            "description": "Batman faces the Joker in Gotham City.",
-            "release_date": "2008-07-18"
-          },
-          {
-            "id": 202,
-            "name": "Fight Club",
-            "poster": "https://via.placeholder.com/150",
-            "description": "An insomniac and a soap salesman create a fight club.",
-            "release_date": "1999-10-15"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "title": "Action Movies",
-        "movies": [
-          {
-            "id": 301,
-            "name": "Mad Max: Fury Road",
-            "poster": "https://via.placeholder.com/150",
-            "description": "A post-apocalyptic wasteland with high-octane action.",
-            "release_date": "2015-05-15"
-          },
-          {
-            "id": 302,
-            "name": "John Wick",
-            "poster": "https://via.placeholder.com/150",
-            "description": "An ex-hitman seeks vengeance.",
-            "release_date": "2014-10-24"
-          }
-        ]
-      }
-    ],
-    "banner": [
-      {
-        "id": 401,
-        "name": "Avengers: Endgame",
-        "poster": "https://via.placeholder.com/150",
-        "description": "The Avengers take a final stand.",
-        "release_date": "2019-04-26"
-      },
-      {
-        "id": 402,
-        "name": "The Matrix",
-        "poster": "https://via.placeholder.com/150",
-        "description": "A hacker discovers the reality he lives in is an illusion.",
-        "release_date": "1999-03-31"
-      }
-    ]
-  }
-  
+  "categories": [
+    {
+      "id": 1,
+      "title": "Trending Now",
+      "movies": [
+        {
+          "id": 101,
+          "name": "Inception",
+          "poster": "/images/inception.jpg",
+          "description": "A skilled thief leads a team to infiltrate dreams.",
+          "release_date": "2010-07-16"
+        },
+        {
+          "id": 102,
+          "name": "Interstellar",
+          "poster": "https://via.placeholder.com/300x450?text=Interstellar",
+          "description": "Explorers journey through a wormhole in space.",
+          "release_date": "2014-11-07"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Popular Series",
+      "series": [
+        {
+          "id": 501,
+          "name": "Breaking Bad",
+          "poster": "https://via.placeholder.com/300x450?text=Breaking+Bad",
+          "description": "A high school chemistry teacher turns to cooking meth.",
+          "release_date": "2008-01-20",
+          "episodes": [
+            {
+              "id": 1,
+              "title": "Pilot",
+              "description": "Walter White discovers a new path to provide for his family.",
+              "runtime": "58 min"
+            }
+          ]
+        },
+        {
+          "id": 502,
+          "name": "Stranger Things",
+          "poster": "https://via.placeholder.com/300x450?text=Stranger+Things",
+          "description": "A group of kids uncover supernatural secrets in their town.",
+          "release_date": "2016-07-15",
+          "episodes": [
+            {
+              "id": 1,
+              "title": "The Vanishing of Will Byers",
+              "description": "A young boy disappears, and strange events follow.",
+              "runtime": "50 min"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "banner": [
+    {
+      "id": 601,
+      "name": "The Mandalorian",
+      "poster": "https://via.placeholder.com/300x450?text=The+Mandalorian",
+      "description": "A lone bounty hunter navigates the galaxy.",
+      "release_date": "2019-11-12"
+    },
+    {
+      "id": 602,
+      "name": "Game of Thrones",
+      "poster": "https://via.placeholder.com/300x450?text=Game+of+Thrones",
+      "description": "Seven noble families fight for control of the Iron Throne.",
+      "release_date": "2011-04-17"
+    }
+  ]
+}
