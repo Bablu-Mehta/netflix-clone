@@ -56,24 +56,66 @@ const SeriesDetailsPage: React.FC = () => {
 
   if (!series) return null;
 
+  const handlePlayEpisode = (episodeId: number) => {
+    alert(`Playing Episode ${episodeId}`); // Replace with actual play logic
+  };
+
+  const handleDownloadEpisode = (episodeId: number) => {
+    alert(`Downloading Episode ${episodeId}`); // Replace with actual download logic
+  };
+
+  const handlePlaySeries = () => {
+    alert(`Playing series: ${series.name}`); // Replace with actual play logic
+  };
+
+  const handleDownloadSeries = () => {
+    alert(`Downloading series: ${series.name}`); // Replace with actual download logic
+  };
+
   return (
     <div className={styles["details-container"]}>
-      <img src={series.poster} alt={series.name} className={styles["details-poster"]} />
+      <div className={styles["poster-container"]}>
+        <img src={series.poster} alt={series.name} className={styles["details-poster"]} />
+      </div>
       <div className={styles["details-content"]}>
         <h1>{series.name}</h1>
         <p>{series.description}</p>
         <p>
           <strong>Release Date:</strong> {series.release_date}
         </p>
+        <div className={styles["series-buttons"]}>
+          <button className={styles["play-series-button"]} onClick={handlePlaySeries}>
+            Play Series
+          </button>
+          <button className={styles["download-series-button"]} onClick={handleDownloadSeries}>
+            Download Series
+          </button>
+        </div>
         <h2>Episodes</h2>
         <div className={styles["episodes-list"]}>
           {series.episodes.map((episode) => (
             <div key={episode.id} className={styles["episode"]}>
-              <h3>{episode.title}</h3>
-              <p>{episode.description}</p>
-              <p>
-                <strong>Runtime:</strong> {episode.runtime}
-              </p>
+              <div className={styles["episode-info"]}>
+                <h3>{episode.title}</h3>
+                <p>{episode.description}</p>
+                <p>
+                  <strong>Runtime:</strong> {episode.runtime}
+                </p>
+              </div>
+              <div className={styles["episode-buttons"]}>
+                <button
+                  className={styles["play-episode-button"]}
+                  onClick={() => handlePlayEpisode(episode.id)}
+                >
+                  Play
+                </button>
+                <button
+                  className={styles["download-episode-button"]}
+                  onClick={() => handleDownloadEpisode(episode.id)}
+                >
+                  Download
+                </button>
+              </div>
             </div>
           ))}
         </div>

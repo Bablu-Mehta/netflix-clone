@@ -36,8 +36,8 @@ const HomePage: React.FC = () => {
       {/* Rows Section */}
       <main className={styles["content"]}>
         <Row title="Trending Now" categoryId={1} />
-        <Row title="Top Rated" categoryId={2} />
-        <Row title="Action Movies" categoryId={3} />
+        {/* <Row title="Top Rated" categoryId={2} /> */}
+        {/* <Row title="Action Movies" categoryId={3} /> */}
         <Row title="Popular Series" categoryId={5} /> {/* Add Series Row */}
       </main>
 

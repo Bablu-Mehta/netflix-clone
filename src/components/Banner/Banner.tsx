@@ -6,8 +6,8 @@ interface Movie {
   id: number;
   name: string;
   poster: string;
-  description: string; // Add description to the Movie interface
-  isSeries?: boolean; // Optional flag to determine if the item is a series
+  description: string;
+  isSeries?: boolean; // Flag to determine if the item is a series
 }
 
 const Banner: React.FC = () => {
@@ -15,40 +15,43 @@ const Banner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
-  // Fetch the movies for the banner
   useEffect(() => {
     const fetchBannerMovies = async () => {
-      const response = await fetch("/movies.json"); // Fetch the movie data
+      const response = await fetch("/movies.json"); // Adjust this to your API endpoint
       const data = await response.json();
-      setBannerMovies(data.banner); // Assuming the `banner` array exists in the JSON
+      setBannerMovies(data.banner);
     };
 
     fetchBannerMovies();
   }, []);
 
-  // Change the current banner movie every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % bannerMovies.length);
     }, 3000);
 
-    return () => clearInterval(interval); // Clear interval on unmount
+    return () => clearInterval(interval);
   }, [bannerMovies]);
 
-  if (bannerMovies.length === 0) return null; // Avoid rendering if no banner movies exist
+  if (bannerMovies.length === 0) return null;
 
   const movie = bannerMovies[currentIndex];
 
   const handleBannerClick = () => {
-    navigate(movie.isSeries ? `/series/${movie.id}` : `/movie/${movie.id}`);
+    if (movie.isSeries) {
+      navigate(`/series/${movie.id}`);
+    } else {
+      navigate(`/movie/${movie.id}`);
+    }
   };
 
   return (
-    <div className={styles["banner"]} onClick={handleBannerClick}>
+    // <div className={styles["banner"]} onClick={handleBannerClick}>
+    <div className={styles["banner"]}>
       <img className={styles["banner-image"]} src={movie.poster} alt={movie.name} />
       <div className={styles["banner-content"]}>
         <h1 className={styles["banner-title"]}>{movie.name}</h1>
-        <p className={styles["banner-description"]}>{movie.description}</p> {/* Added description */}
+        <p className={styles["banner-description"]}>{movie.description}</p>
       </div>
     </div>
   );

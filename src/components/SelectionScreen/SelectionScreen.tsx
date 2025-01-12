@@ -33,7 +33,7 @@ const SelectionScreen: React.FC = () => {
       <div className={styles["profile-list"]}>
         <div className={styles["profile-card"]} onClick={handleProfileClick}>
           <img
-            src="https://i.pinimg.com/564x/a8/0f/19/a80f19f4953b1c1d838aa1382538c9e0.jpg"
+            src="/images/bad.jpg"
             alt="Admin Profile"
             className={styles["profile-image"]}
           />
@@ -41,7 +41,7 @@ const SelectionScreen: React.FC = () => {
         </div>
         <div className={styles["profile-card"]} onClick={handleProfileClick}>
           <img
-            src="https://i.pinimg.com/564x/6a/76/4c/6a764cb03201c29197e56ec9f9c256d1.jpg"
+            src="/images/mand.jfif"
             alt="Guest Profile"
             className={styles["profile-image"]}
           />

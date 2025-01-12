@@ -14,9 +14,71 @@
         {
           "id": 102,
           "name": "Interstellar",
-          "poster": "https://via.placeholder.com/300x450?text=Interstellar",
+          "poster": "/images/interstellar.jpg",
           "description": "Explorers journey through a wormhole in space.",
           "release_date": "2014-11-07"
+        },
+        {
+          "id": 103,
+          "name": "The Dark Knight",
+          "poster": "/images/inception.jpg",
+          "description": "Batman faces the Joker in Gotham City.",
+          "release_date": "2008-07-18"
+        },
+        {
+          "id": 104,
+          "name": "Avengers: Endgame",
+          "poster": "/images/interstellar.jpg",
+          "description": "The Avengers take a final stand against Thanos.",
+          "release_date": "2019-04-26"
+        },
+        {
+          "id": 105,
+          "name": "The Matrix",
+          "poster": "/images/inception.jpg",
+          "description": "A hacker discovers the reality he lives in is an illusion.",
+          "release_date": "1999-03-31"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Top Rated",
+      "movies": [
+        {
+          "id": 201,
+          "name": "Fight Club",
+          "poster": "/images/interstellar.jpg",
+          "description": "An insomniac and a soap salesman create a fight club.",
+          "release_date": "1999-10-15"
+        },
+        {
+          "id": 202,
+          "name": "Forrest Gump",
+          "poster": "/images/inception.jpg",
+          "description": "A man with a low IQ lives an extraordinary life.",
+          "release_date": "1994-07-06"
+        },
+        {
+          "id": 203,
+          "name": "Pulp Fiction",
+          "poster": "/images/interstellar.jpg",
+          "description": "The lives of two mob hitmen intertwine in this classic.",
+          "release_date": "1994-10-14"
+        },
+        {
+          "id": 204,
+          "name": "The Shawshank Redemption",
+          "poster": "/images/inception.jpg",
+          "description": "A man imprisoned for murder maintains hope over decades.",
+          "release_date": "1994-09-22"
+        },
+        {
+          "id": 205,
+          "name": "Gladiator",
+          "poster": "/images/interstellar.jpg",
+          "description": "A betrayed Roman general fights his way back for revenge.",
+          "release_date": "2000-05-05"
         }
       ]
     },
@@ -27,7 +89,7 @@
         {
           "id": 501,
           "name": "Breaking Bad",
-          "poster": "https://via.placeholder.com/300x450?text=Breaking+Bad",
+          "poster": "/images/bad.jpg",
           "description": "A high school chemistry teacher turns to cooking meth.",
           "release_date": "2008-01-20",
           "episodes": [
@@ -36,13 +98,19 @@
               "title": "Pilot",
               "description": "Walter White discovers a new path to provide for his family.",
               "runtime": "58 min"
+            },
+            {
+              "id": 2,
+              "title": "Cat's in the Bag...",
+              "description": "Walter and Jesse clean up after their first cook.",
+              "runtime": "48 min"
             }
           ]
         },
         {
           "id": 502,
           "name": "Stranger Things",
-          "poster": "https://via.placeholder.com/300x450?text=Stranger+Things",
+          "poster": "/images/stranger.webp",
           "description": "A group of kids uncover supernatural secrets in their town.",
           "release_date": "2016-07-15",
           "episodes": [
@@ -51,6 +119,69 @@
               "title": "The Vanishing of Will Byers",
               "description": "A young boy disappears, and strange events follow.",
               "runtime": "50 min"
+            },
+            {
+              "id": 2,
+              "title": "The Weirdo on Maple Street",
+              "description": "A mysterious girl with powers appears.",
+              "runtime": "55 min"
+            }
+          ]
+        },
+        {
+          "id": 503,
+          "name": "The Mandalorian",
+          "poster": "/images/mand.jfif",
+          "description": "A lone bounty hunter navigates the galaxy.",
+          "release_date": "2019-11-12",
+          "episodes": [
+            {
+              "id": 1,
+              "title": "Chapter 1",
+              "description": "A bounty hunter takes on a mysterious job.",
+              "runtime": "40 min"
+            },
+            {
+              "id": 2,
+              "title": "Chapter 2",
+              "description": "The bounty hunter faces unexpected challenges.",
+              "runtime": "38 min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Family Favorites",
+      "series": [
+        {
+          "id": 601,
+          "name": "The Simpsons",
+          "poster": "/images/bad.jpg",
+          "description": "A satirical look at an average family's life.",
+          "release_date": "1989-12-17",
+          "episodes": [
+            {
+              "id": 1,
+              "title": "Simpsons Roasting on an Open Fire",
+              "description": "Homer and Bart rescue Christmas.",
+              "runtime": "30 min"
+            }
+          ]
+        },
+        {
+          "id": 602,
+          "name": "Friends",
+          "poster": "/images/stranger.webp",
+          "description": "Six friends navigate life and relationships in NYC.",
+          "release_date": "1994-09-22",
+          "episodes": [
+            {
+              "id": 1,
+              "title": "The One Where Monica Gets a Roommate",
+              "description": "The gang gathers in Monica's apartment.",
+              "runtime": "22 min"
             }
           ]
         }
@@ -59,16 +190,16 @@
   ],
   "banner": [
     {
-      "id": 601,
+      "id": 701,
       "name": "The Mandalorian",
-      "poster": "https://via.placeholder.com/300x450?text=The+Mandalorian",
+      "poster": "/images/mand.jfif",
       "description": "A lone bounty hunter navigates the galaxy.",
       "release_date": "2019-11-12"
     },
     {
-      "id": 602,
+      "id": 702,
       "name": "Game of Thrones",
-      "poster": "https://via.placeholder.com/300x450?text=Game+of+Thrones",
+      "poster": "/images/game.jfif",
       "description": "Seven noble families fight for control of the Iron Throne.",
       "release_date": "2011-04-17"
     }
