@@ -37,13 +37,13 @@ const Banner: React.FC = () => {
 
   const movie = bannerMovies[currentIndex];
 
-  const handleBannerClick = () => {
-    if (movie.isSeries) {
-      navigate(`/series/${movie.id}`);
-    } else {
-      navigate(`/movie/${movie.id}`);
-    }
-  };
+  // const handleBannerClick = () => {
+  //   if (movie.isSeries) {
+  //     navigate(`/series/${movie.id}`);
+  //   } else {
+  //     navigate(`/movie/${movie.id}`);
+  //   }
+  // };
 
   return (
     // <div className={styles["banner"]} onClick={handleBannerClick}>
