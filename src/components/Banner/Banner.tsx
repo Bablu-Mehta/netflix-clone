@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import styles from "./Banner.module.scss";
 
 interface Movie {
@@ -13,7 +13,7 @@ interface Movie {
 const Banner: React.FC = () => {
   const [bannerMovies, setBannerMovies] = useState<Movie[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBannerMovies = async () => {
