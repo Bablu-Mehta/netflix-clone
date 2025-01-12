@@ -1,71 +1,140 @@
 .selection-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #141414;
-    color: white;
-    position: relative;
-  }
-  
-  .logout-button-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
-  .logout-button {
-    padding: 10px 20px;
-    background: #e50914;
-    border: none;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .logout-button:hover {
-    background: #f40612;
-  }
-  
-  .selection-title {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-  
-  .profile-list {
-    display: flex;
-    gap: 30px;
-  }
-  
-  .profile-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .profile-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0px rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #141414;
+  color: white;
+  position: relative;
+  padding: 20px; /* Add padding for smaller screens */
+
+  @media (max-width: 768px) {
+    height: auto; /* Adjust height for tablets */
+    padding: 15px;
   }
 
-  .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    object-fit: cover;
-    border: 2px solid #ffffff;
+  @media (max-width: 480px) {
+    padding: 10px; /* Further reduce padding for mobile */
   }
-  
-  .profile-name {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
+}
+
+.logout-button-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  @media (max-width: 480px) {
+    top: 10px;
+    right: 10px;
   }
-  
+}
+
+.logout-button {
+  padding: 10px 20px;
+  background: #e50914;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  @media (max-width: 768px) {
+    font-size: 12px; /* Adjust font size for tablets */
+    padding: 8px 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px; /* Adjust font size for mobile */
+    padding: 6px 12px;
+  }
+}
+
+.logout-button:hover {
+  background: #f40612;
+}
+
+.selection-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 30px; /* Adjust title size for tablets */
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px; /* Further adjust title size for mobile */
+    margin-bottom: 20px;
+  }
+}
+
+.profile-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; /* Ensure profiles wrap on smaller screens */
+
+  @media (max-width: 768px) {
+    gap: 20px; /* Reduce gap for tablets */
+  }
+
+  @media (max-width: 480px) {
+    gap: 15px; /* Further reduce gap for mobile */
+  }
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  @media (max-width: 768px) {
+    transform: scale(0.9); /* Slightly smaller cards for tablets */
+  }
+
+  @media (max-width: 480px) {
+    transform: scale(0.8); /* Further scale down for mobile */
+  }
+}
+
+.profile-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px rgba(255, 255, 255, 0.3);
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+
+  @media (max-width: 768px) {
+    width: 120px; /* Reduce size for tablets */
+    height: 120px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100px; /* Further reduce size for mobile */
+    height: 100px;
+  }
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 16px; /* Adjust font size for tablets */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px; /* Further adjust font size for mobile */
+  }
+}

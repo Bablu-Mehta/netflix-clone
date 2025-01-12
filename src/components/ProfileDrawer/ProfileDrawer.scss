@@ -6,12 +6,24 @@
   background-color: #141414;
   color: white;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    padding: 15px; /* Adjust padding for tablets */
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px; /* Adjust padding for mobile devices */
+  }
 }
 
 .profile-details {
   display: flex;
   flex-direction: column;
   gap: 15px; /* Space between profile items */
+
+  @media (max-width: 480px) {
+    gap: 10px; /* Reduce spacing on smaller screens */
+  }
 }
 
 .profile-title {
@@ -19,11 +31,19 @@
   font-weight: bold;
   margin-bottom: 20px;
   color: white;
+
+  @media (max-width: 480px) {
+    font-size: 20px; /* Adjust font size for mobile */
+  }
 }
 
 .profile-info {
   font-size: 16px;
   color: #b3b3b3;
+
+  @media (max-width: 480px) {
+    font-size: 14px; /* Reduce font size for mobile */
+  }
 }
 
 .logout-button {
@@ -35,6 +55,11 @@
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+
+  @media (max-width: 480px) {
+    font-size: 14px; /* Adjust button font size for mobile */
+    padding: 8px; /* Reduce padding on smaller screens */
+  }
 }
 
 .logout-button:hover {

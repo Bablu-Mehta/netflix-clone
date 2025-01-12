@@ -7,6 +7,15 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, transparent),
     url("https://assets.nflxext.com/ffe/siteui/vlv3/74cc5670-5871-4a06-8831-10697c31472c/cf38c929-4c80-4f90-b1c6-59eb4a8a200f/IN-en-20230130-popsignuptwoweeks-perspective_alpha_website_medium.jpg")
       no-repeat center center/cover;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 15px;
+  }
 }
 
 .login-header {
@@ -15,6 +24,10 @@
 
 .login-logo {
   width: 150px;
+
+  @media (max-width: 480px) {
+    width: 120px; /* Reduce logo size for mobile devices */
+  }
 }
 
 .login-form {
@@ -25,11 +38,25 @@
   width: 300px;
   color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 768px) {
+    width: 260px; /* Adjust form width for tablets */
+    padding: 30px;
+  }
+
+  @media (max-width: 480px) {
+    width: 90%; /* Use responsive width for mobile devices */
+    padding: 20px;
+  }
 }
 
 .login-form h1 {
   font-size: 24px;
   margin-bottom: 20px;
+
+  @media (max-width: 480px) {
+    font-size: 20px; /* Adjust font size for mobile */
+  }
 }
 
 .login-input {
@@ -41,6 +68,11 @@
   border-radius: 5px;
   color: white;
   font-size: 14px;
+
+  @media (max-width: 480px) {
+    padding: 10px; /* Adjust input padding for mobile */
+    font-size: 13px;
+  }
 }
 
 .login-input::placeholder {
@@ -62,6 +94,16 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    font-size: 16px; /* Adjust button font size for tablets */
+    padding: 12px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px; /* Adjust button font size for mobile */
+    padding: 10px;
+  }
 }
 
 .login-button:hover {
@@ -81,13 +123,17 @@
   margin-top: 15px;
   font-size: 14px;
   color: #b3b3b3;
+
+  @media (max-width: 480px) {
+    font-size: 12px; /* Adjust font size for mobile */
+  }
 }
 
 .login-help a {
   color: #b3b3b3;
   text-decoration: none;
-}
 
-.login-help a:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
