@@ -57,19 +57,19 @@ const SeriesDetailsPage: React.FC = () => {
   if (!series) return null;
 
   const handlePlayEpisode = (episodeId: number) => {
-    alert(`Playing Episode ${episodeId}`); // Replace with actual play logic
+    alert(`Playing Episode ${episodeId}`);
   };
 
   const handleDownloadEpisode = (episodeId: number) => {
-    alert(`Downloading Episode ${episodeId}`); // Replace with actual download logic
+    alert(`Downloading Episode ${episodeId}`);
   };
 
   const handlePlaySeries = () => {
-    alert(`Playing series: ${series.name}`); // Replace with actual play logic
+    alert(`Playing series: ${series.name}`);
   };
 
   const handleDownloadSeries = () => {
-    alert(`Downloading series: ${series.name}`); // Replace with actual download logic
+    alert(`Downloading series: ${series.name}`);
   };
 
   return (

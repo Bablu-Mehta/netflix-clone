@@ -23,7 +23,7 @@
   margin-bottom: 20px;
 
   @media (max-width: 480px) {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 90%;
   }
 }
 
@@ -32,7 +32,7 @@
   max-width: 800px;
 
   @media (max-width: 480px) {
-    max-width: 100%; /* Use full width for mobile */
+    max-width: 100%;
   }
 }
 
@@ -41,7 +41,7 @@
   margin-bottom: 10px;
 
   @media (max-width: 480px) {
-    font-size: 28px; /* Adjust font size for smaller screens */
+    font-size: 28px;
   }
 }
 
@@ -50,7 +50,7 @@
   margin: 5px 0;
 
   @media (max-width: 480px) {
-    font-size: 16px; /* Adjust font size for mobile */
+    font-size: 16px;
   }
 }
 
@@ -59,7 +59,7 @@
 
   @media (max-width: 480px) {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically on mobile */
+    flex-direction: column;
     gap: 10px;
   }
 }
@@ -77,7 +77,7 @@
   transition: background-color 0.3s ease;
 
   @media (max-width: 480px) {
-    font-size: 14px; /* Adjust button size for smaller screens */
+    font-size: 14px;
     padding: 8px 16px;
   }
 }
@@ -107,7 +107,7 @@
   margin-bottom: 20px;
 
   @media (max-width: 480px) {
-    font-size: 24px; /* Adjust font size for mobile */
+    font-size: 24px;
   }
 }
 
@@ -125,7 +125,7 @@
   transition: transform 0.3s;
 
   @media (max-width: 480px) {
-    max-width: 120px; /* Adjust size for mobile */
+    max-width: 120px;
   }
 }
 
@@ -134,7 +134,7 @@
   border-radius: 5px;
 
   @media (max-width: 480px) {
-    border-radius: 3px; /* Slightly reduce border radius for mobile */
+    border-radius: 3px;
   }
 }
 
@@ -144,7 +144,7 @@
   margin-top: 5px;
 
   @media (max-width: 480px) {
-    font-size: 12px; /* Adjust font size for mobile */
+    font-size: 12px;
   }
 }
 

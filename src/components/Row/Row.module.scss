@@ -1,34 +1,31 @@
-/* Container for each row */
 .row-container {
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    margin-bottom: 15px; /* Reduce spacing for tablets */
+    margin-bottom: 15px;
   }
 
   @media (max-width: 480px) {
-    margin-bottom: 10px; /* Further reduce spacing for mobile devices */
+    margin-bottom: 10px;
   }
 }
 
-/* Title for the row (e.g., "Trending Now") */
 .row-title {
   font-size: 18px;
   margin-left: 20px;
   color: white;
 
   @media (max-width: 768px) {
-    font-size: 16px; /* Adjust font size for tablets */
-    margin-left: 15px; /* Reduce left margin for smaller screens */
+    font-size: 16px;
+    margin-left: 15px;
   }
 
   @media (max-width: 480px) {
-    font-size: 14px; /* Further adjust font size for mobile devices */
+    font-size: 14px;
     margin-left: 10px;
   }
 }
 
-/* Flexbox to horizontally scroll the items */
 .row-items {
   display: flex;
   overflow-x: scroll;
@@ -36,17 +33,16 @@
   gap: 10px;
 
   @media (max-width: 768px) {
-    padding: 10px 15px; /* Adjust padding for tablets */
-    gap: 8px; /* Reduce gap for smaller screens */
+    padding: 10px 15px;
+    gap: 8px;
   }
 
   @media (max-width: 480px) {
-    padding: 10px 10px; /* Further adjust padding for mobile */
+    padding: 10px 10px;
     gap: 5px;
   }
 }
 
-/* Hide scrollbar for a cleaner look */
 .row-items::-webkit-scrollbar {
   display: none;
 }
@@ -61,12 +57,12 @@
   cursor: pointer;
 
   @media (max-width: 768px) {
-    width: 120px; /* Reduce poster size for tablets */
+    width: 120px;
     height: 180px;
   }
 
   @media (max-width: 480px) {
-    width: 100px; /* Further reduce size for mobile */
+    width: 100px;
     height: 150px;
   }
 }
@@ -76,6 +72,6 @@
   transform: scale(1.1);
 
   @media (max-width: 480px) {
-    transform: scale(1.05); /* Subtle hover effect for mobile */
+    transform: scale(1.05);
   }
 }

@@ -34,15 +34,14 @@ const MovieDetailsPage: React.FC = () => {
         if (foundMovie) {
           setMovie(foundMovie);
 
-          // Filter suggestions: exclude the current movie and limit to 6 suggestions
           const suggestions = allMovies.filter((m) => m.id !== Number(id)).slice(0, 6);
           setSuggestedMovies(suggestions);
         } else {
-          navigate("/home"); // Redirect to home if movie not found
+          navigate("/home");
         }
       } catch (error) {
         console.error("Error fetching movie details:", error);
-        navigate("/home"); // Redirect to home on error
+        navigate("/home");
       }
     };
 

@@ -21,8 +21,8 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    dispatch(logout()); // Clear authentication state
-    onClose(); // Close the drawer
+    dispatch(logout());
+    onClose();
   };
 
   return (

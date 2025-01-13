@@ -16,11 +16,11 @@
   z-index: 10;
 
   @media (max-width: 768px) {
-    padding: 15px 30px; /* Adjust padding for tablets */
+    padding: 15px 30px;
   }
 
   @media (max-width: 480px) {
-    padding: 10px 20px; /* Adjust padding for mobile */
+    padding: 10px 20px;
   }
 }
 
@@ -28,7 +28,7 @@
   height: 30px;
 
   @media (max-width: 480px) {
-    height: 24px; /* Scale down the logo for mobile */
+    height: 24px;
   }
 }
 
@@ -44,13 +44,13 @@
   font-size: 14px;
 
   @media (max-width: 768px) {
-    padding: 6px 12px; /* Adjust padding for tablets */
-    font-size: 12px; /* Adjust font size */
+    padding: 6px 12px;
+    font-size: 12px;
   }
 
   @media (max-width: 480px) {
-    padding: 5px 10px; /* Adjust padding for mobile */
-    font-size: 10px; /* Adjust font size */
+    padding: 5px 10px;
+    font-size: 10px;
   }
 }
 
@@ -64,10 +64,10 @@
   padding: 20px;
 
   @media (max-width: 768px) {
-    padding: 15px; /* Reduce padding for tablets */
+    padding: 15px;
   }
 
   @media (max-width: 480px) {
-    padding: 10px; /* Reduce padding for mobile */
+    padding: 10px;
   }
 }

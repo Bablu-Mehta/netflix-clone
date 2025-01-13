@@ -7,15 +7,15 @@
   background-color: #141414;
   color: white;
   position: relative;
-  padding: 20px; /* Add padding for smaller screens */
+  padding: 20px;
 
   @media (max-width: 768px) {
-    height: auto; /* Adjust height for tablets */
+    height: auto;
     padding: 15px;
   }
 
   @media (max-width: 480px) {
-    padding: 10px; /* Further reduce padding for mobile */
+    padding: 10px;
   }
 }
 
@@ -42,12 +42,12 @@
   transition: background 0.3s;
 
   @media (max-width: 768px) {
-    font-size: 12px; /* Adjust font size for tablets */
+    font-size: 12px;
     padding: 8px 16px;
   }
 
   @media (max-width: 480px) {
-    font-size: 10px; /* Adjust font size for mobile */
+    font-size: 10px;
     padding: 6px 12px;
   }
 }
@@ -61,12 +61,12 @@
   margin-bottom: 40px;
 
   @media (max-width: 768px) {
-    font-size: 30px; /* Adjust title size for tablets */
+    font-size: 30px;
     margin-bottom: 30px;
   }
 
   @media (max-width: 480px) {
-    font-size: 24px; /* Further adjust title size for mobile */
+    font-size: 24px;
     margin-bottom: 20px;
   }
 }
@@ -74,14 +74,14 @@
 .profile-list {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap; /* Ensure profiles wrap on smaller screens */
+  flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    gap: 20px; /* Reduce gap for tablets */
+    gap: 20px;
   }
 
   @media (max-width: 480px) {
-    gap: 15px; /* Further reduce gap for mobile */
+    gap: 15px;
   }
 }
 
@@ -93,11 +93,11 @@
   transition: transform 0.3s, box-shadow 0.3s;
 
   @media (max-width: 768px) {
-    transform: scale(0.9); /* Slightly smaller cards for tablets */
+    transform: scale(0.9);
   }
 
   @media (max-width: 480px) {
-    transform: scale(0.8); /* Further scale down for mobile */
+    transform: scale(0.8);
   }
 }
 
@@ -115,12 +115,12 @@
   border: 2px solid #ffffff;
 
   @media (max-width: 768px) {
-    width: 120px; /* Reduce size for tablets */
+    width: 120px;
     height: 120px;
   }
 
   @media (max-width: 480px) {
-    width: 100px; /* Further reduce size for mobile */
+    width: 100px;
     height: 100px;
   }
 }
@@ -131,10 +131,10 @@
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 16px; /* Adjust font size for tablets */
+    font-size: 16px;
   }
 
   @media (max-width: 480px) {
-    font-size: 14px; /* Further adjust font size for mobile */
+    font-size: 14px;
   }
 }

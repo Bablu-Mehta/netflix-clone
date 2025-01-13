@@ -9,12 +9,12 @@ const SelectionScreen: React.FC = () => {
   const dispatch = useDispatch();
 
   const handleProfileClick = () => {
-    navigate("/home"); // Navigate to the home screen when a profile is selected
+    navigate("/home");
   };
 
   const handleLogout = () => {
-    dispatch(logout()); // Dispatch logout action to clear auth state
-    navigate("/"); // Redirect to the login page after logging out
+    dispatch(logout());
+    navigate("/");
   };
 
   return (

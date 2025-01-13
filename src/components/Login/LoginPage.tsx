@@ -17,7 +17,6 @@ const LoginPage: React.FC = () => {
     dispatch(login({ email, password }));
   };
 
-  // Redirect to /select if already logged in
   if (isAuthenticated) {
     navigate("/select");
   }

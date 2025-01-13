@@ -1,28 +1,28 @@
 .profile-drawer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space between profile details and logout button */
+  justify-content: space-between;
   height: 100%;
   background-color: #141414;
   color: white;
   padding: 20px;
 
   @media (max-width: 768px) {
-    padding: 15px; /* Adjust padding for tablets */
+    padding: 15px;
   }
 
   @media (max-width: 480px) {
-    padding: 10px; /* Adjust padding for mobile devices */
+    padding: 10px;
   }
 }
 
 .profile-details {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Space between profile items */
+  gap: 15px;
 
   @media (max-width: 480px) {
-    gap: 10px; /* Reduce spacing on smaller screens */
+    gap: 10px;
   }
 }
 
@@ -33,7 +33,7 @@
   color: white;
 
   @media (max-width: 480px) {
-    font-size: 20px; /* Adjust font size for mobile */
+    font-size: 20px;
   }
 }
 
@@ -42,7 +42,7 @@
   color: #b3b3b3;
 
   @media (max-width: 480px) {
-    font-size: 14px; /* Reduce font size for mobile */
+    font-size: 14px;
   }
 }
 
@@ -57,8 +57,8 @@
   transition: background-color 0.3s ease;
 
   @media (max-width: 480px) {
-    font-size: 14px; /* Adjust button font size for mobile */
-    padding: 8px; /* Reduce padding on smaller screens */
+    font-size: 14px;
+    padding: 8px;
   }
 }
 

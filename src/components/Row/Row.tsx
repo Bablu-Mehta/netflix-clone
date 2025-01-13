@@ -1,35 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Row.module.scss";
-import { Movie, Series } from "../../../interfaces"; // Import shared interfaces
+import { Movie, Series } from "../../../interfaces";
 
 interface RowProps {
-  title: string; // Title of the row (e.g., "Trending Now")
-  categoryId: number; // Category ID to fetch movies/series
+  title: string;
+  categoryId: number;
 }
 
 export interface Category {
-  id: number; // Unique ID for the category
-  title: string; // Title of the category
-  movies?: Movie[]; // Optional, as some categories may only have series
-  series?: Series[]; // Optional, as some categories may only have movies
+  id: number;
+  title: string;
+  movies?: Movie[];
+  series?: Series[];
 }
 
 const Row: React.FC<RowProps> = ({ title, categoryId }) => {
-  const [items, setItems] = useState<(Movie | Series)[]>([]); // Handles both movies and series
+  const [items, setItems] = useState<(Movie | Series)[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await fetch("/movies.json"); // Fetch data from movies.json
+      const response = await fetch("/movies.json");
       const data: { categories: Category[] } = await response.json();
 
-      // Find the category matching the given categoryId
       const category = data.categories.find((cat) => cat.id === categoryId);
       if (category) {
         const combinedItems = [
-          ...(category.movies || []), // Add movies if they exist
-          ...(category.series || []), // Add series if they exist
+          ...(category.movies || []), 
+          ...(category.series || []), 
         ];
         setItems(combinedItems);
       }
@@ -38,7 +37,6 @@ const Row: React.FC<RowProps> = ({ title, categoryId }) => {
     fetchItems();
   }, [categoryId]);
 
-  // Handle click to navigate to movie/series details
   const handleItemClick = (id: number, isSeries: boolean) => {
     navigate(isSeries ? `/series/${id}` : `/movie/${id}`);
   };
@@ -53,7 +51,7 @@ const Row: React.FC<RowProps> = ({ title, categoryId }) => {
             className={styles["row-item"]}
             src={item.poster}
             alt={item.name}
-            onClick={() => handleItemClick(item.id, "episodes" in item)} // Check if it's a series
+            onClick={() => handleItemClick(item.id, "episodes" in item)}
           />
         ))}
       </div>

@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const profileData = {
-    name: "Admin", // Replace with actual data if available
+    name: "Admin",
     email: "admin@gmail.com",
   };
 
@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
         <Row title="Trending Now" categoryId={1} />
         {/* <Row title="Top Rated" categoryId={2} /> */}
         {/* <Row title="Action Movies" categoryId={3} /> */}
-        <Row title="Popular Series" categoryId={5} /> {/* Add Series Row */}
+        <Row title="Popular Series" categoryId={5} />
       </main>
 
       {/* Profile Drawer */}

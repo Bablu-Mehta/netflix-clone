@@ -7,7 +7,7 @@ interface Movie {
   name: string;
   poster: string;
   description: string;
-  isSeries?: boolean; // Flag to determine if the item is a series
+  isSeries?: boolean;
 }
 
 const Banner: React.FC = () => {
@@ -17,7 +17,7 @@ const Banner: React.FC = () => {
 
   useEffect(() => {
     const fetchBannerMovies = async () => {
-      const response = await fetch("/movies.json"); // Adjust this to your API endpoint
+      const response = await fetch("/movies.json");
       const data = await response.json();
       setBannerMovies(data.banner);
     };
